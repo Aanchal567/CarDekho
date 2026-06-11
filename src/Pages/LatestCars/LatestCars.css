@@ -1,0 +1,124 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.latest-cars-page {
+  font-family: Lato, Sans-Serif, Arial;
+  color: rgba(36, 39, 44, 0.7);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* ── Hero Banner ── */
+#topBanner {
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.hero-banner-img {
+  height: 100%;
+  left: 0;
+  margin: 0 auto;
+  max-width: 1600px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ── Banner Circle ── */
+#topBanner .bannercircle {
+  background: #f75d34;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+  position: absolute;
+  z-index: 2;
+  height: 350px;
+  width: 350px;
+  left: -40px;
+  top: -130px;
+}
+
+@media screen and (min-width: 768px) {
+  #topBanner .bannercircle {
+    height: 350px;
+    width: 350px;
+    left: -40px;
+    top: -130px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #topBanner .bannercircle {
+    height: 600px;
+    width: 600px;
+    left: -40px;
+    top: -186px;
+  }
+}
+
+/* ── Hero Overlay ── */
+.hero-overlay {
+  position: relative;
+  z-index: 3;
+  background: linear-gradient(to right, rgba(180, 60, 0, 0.75) 0%, rgba(200, 80, 10, 0.4) 50%, transparent 100%);
+  min-height: 320px;
+  padding: 60px 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ── Hero Filters ── */
+.hero-filters {
+  display: flex;
+  gap: 0;
+  background: white;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.hero-filters select {
+  padding: 18px 40px 18px 20px;
+  border: none;
+  border-right: 1px solid #eee;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+  min-width: 200px;
+  appearance: auto;
+}
+
+.search-btn {
+  padding: 18px 40px;
+  background: #e8590c;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ── Main Layout ── */
+.main-content {
+  display: flex;
+  gap: 24px;
+  padding: 24px 32px;
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.left-section { flex: 1; min-width: 0; }

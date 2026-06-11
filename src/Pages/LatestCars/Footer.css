@@ -1,0 +1,80 @@
+.footer {
+  background: white;
+  padding: 40px;
+  border-top: 1px solid #eee;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.footer-col h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 13px;
+  color: #666;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.footer-col a:hover { color: #e8590c; }
+
+.app-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.app-buttons img {
+  height: 36px;
+  object-fit: contain;
+  width: fit-content;
+}
+
+.ventures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.venture-tag {
+  font-size: 12px;
+  font-weight: 600;
+  color: #e8590c;
+  border: 1px solid #e8590c;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding-top: 16px;
+  font-size: 13px;
+  color: #888;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-icon {
+  cursor: pointer;
+  font-size: 16px;
+  color: #555;
+}

@@ -1,0 +1,27 @@
+.trust-badges {
+  display: flex;
+  justify-content: space-around;
+  padding: 32px 40px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  background: white;
+}
+
+.badge-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.badge-icon { font-size: 32px; }
+
+.badge-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.badge-subtitle {
+  font-size: 13px;
+  color: #777;
+}

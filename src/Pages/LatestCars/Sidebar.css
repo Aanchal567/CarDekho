@@ -1,0 +1,119 @@
+.sidebar {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.sidebar-card {
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 16px;
+  background: white;
+  margin-bottom: 20px;
+}
+
+.sidebar-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #1a1a1a;
+}
+
+/* ── Brands Grid ── */
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.brand-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 8px 4px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.brand-item:hover {
+  background: #f5f5f5;
+}
+
+.brand-item img {
+  width: 70px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.brand-item span {
+  font-size: 11px;
+  color: #555;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* ── View All ── */
+.view-all {
+  color: #e8590c;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+/* ── Car Items ── */
+.sidebar-car-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+}
+
+.sidebar-car-item:hover {
+  background: #fafafa;
+}
+
+.sidebar-car-img {
+  width: 70px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+  background: #f5f5f5;
+}
+
+.sidebar-car-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 2px;
+}
+
+.sidebar-car-price {
+  font-size: 12px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.estimated {
+  color: #888;
+  font-size: 11px;
+}
+
+.launch-date {
+  font-size: 11px;
+  color: #888;
+  margin-top: 2px;
+}
