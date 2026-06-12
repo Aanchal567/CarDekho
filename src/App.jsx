@@ -1,14 +1,10 @@
-import Navbar from "./Navbar/Navbar";
-import LatestCars from "./Pages/LatestCars/LatestCars";
+import React from "react";
 import "@fontsource/lato";
-
+import LatestCars from "./pages/LatestCars/LatestCars";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
-  return (
-    <>
-      <Navbar />
-      <LatestCars />
-    </>
-  );
+  return <LatestCars />;
+ 
 }
 
 export default App;

@@ -1,6 +1,4 @@
-.lang-dropdown {
-  position: relative;
-}
+.lang-dropdown { position: relative; }
 
 .lang-label {
   display: flex;
@@ -8,7 +6,8 @@
   gap: 5px;
   cursor: pointer;
   font-family: "Lato", sans-serif;
-  font-size: 15px;
+  font-size: 14px;
+  color: rgba(36, 39, 44, 0.87);
 }
 
 .lang-menu {
@@ -26,13 +25,12 @@
   padding: 12px 20px;
   cursor: pointer;
   font-family: "Lato", sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   color: rgba(36, 39, 44, 0.87);
   border-bottom: 1px solid #eee;
 }
 
-.lang-item:hover,
-.lang-item.active {
+.lang-item:hover, .lang-item.active {
   background-color: #f5f5f5;
   font-weight: 600;
 }

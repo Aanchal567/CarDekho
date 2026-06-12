@@ -9,64 +9,59 @@ import LanguageDropdown from "./LanguageDropdown";
 import LocationModal from "./LocationModal";
 
 const Navbar = () => {
-    const [showLocationModal, setShowLocationModal] = useState(false);
-    const [city, setCity] = useState("Jaipur");
+  const [showModal, setShowModal] = useState(false);
+  const [city, setCity] = useState("Jaipur");
 
-    return (
-        <>
-            <nav className="navbar">
-                <div className="navbar-top">
-                    <div className="logo">
-                        <img
-                            src="https://stimg.cardekho.com/pwa/img/carDekho-newLogo.svg"
-                            alt="logo"
-                        />
-                    </div>
+  return (
+    <>
+      <nav className="navbar">
+        <div className="navbar-top">
+          <div className="logo">
+            <img src="https://stimg.cardekho.com/pwa/img/carDekho-newLogo.svg" alt="CarDekho" />
+          </div>
+          <div className="search-box">
+            <select className="category-dropdown">
+              <option>All</option>
+              <option>New</option>
+              <option>Used</option>
+            </select>
+            <div className="divider" />
+            <Search size={18} color="#888" />
+            <input type="text" placeholder="Search Cars" />
+          </div>
+          <div className="nav-right">
+            <LanguageDropdown />
+            <Heart size={22} color="#555" style={{ cursor: "pointer" }} />
+            <div className="login">
+              <User size={20} />
+              Login / Register
+            </div>
+          </div>
+        </div>
 
-                    <div className="search-box">
-                        <select className="category-dropdown">
-                            <option value="all">All</option>
-                            <option value="new">New</option>
-                            <option value="used">Used</option>
-                        </select>
-                        <div className="divider"></div>
-                        <Search size={20} />
-                        <input type="text" placeholder="Search Cars" />
-                    </div>
+        <div className="navbar-bottom">
+          <div className="menu">
+            <NewCarsDropdown />
+            <UsedCarsDropdown />
+            <NewsDropdown />
+            <VideosDropdown />
+          </div>
+          <div className="location" onClick={() => setShowModal(true)}>
+            <MapPin size={16} />
+            {city}
+            <ChevronDown size={13} />
+          </div>
+        </div>
+      </nav>
 
-                    <div className="nav-right">
-                        <LanguageDropdown />
-                        <Heart size={24} />
-                        <div className="login">
-                            <User size={22} />
-                            Login / Register
-                        </div>
-                    </div>
-                </div>
-
-                <div className="navbar-bottom">
-                    <div className="menu">
-                        <NewCarsDropdown />
-                        <UsedCarsDropdown />
-                        <NewsDropdown />
-                        <VideosDropdown />
-                    </div>
-                    <div className="location" onClick={() => setShowLocationModal(true)}>
-                        <MapPin size={18} />
-                        {city}
-                        <ChevronDown size={14} />
-                    </div>
-                </div>
-            </nav>
-
-            {showLocationModal && (
-                <LocationModal
-                    onClose={() => setShowLocationModal(false)}
-                    onSelectCity={(c) => { setCity(c); setShowLocationModal(false); }}
-                />
-            )}
-        </>
-    );
+      {showModal && (
+        <LocationModal
+          onClose={() => setShowModal(false)}
+          onSelectCity={c => { setCity(c); setShowModal(false); }}
+        />
+      )}
+    </>
+  );
 };
 
 export default Navbar;

@@ -1,0 +1,188 @@
+{
+  "Maruti Suzuki": {
+    "rating": "4.5",
+    "reviews": "10.2K",
+    "description": "The most affordable Maruti Suzuki car price starts from ₹3.50 Lakh for the Maruti Suzuki S-Presso and goes all the way up to ₹28.61 Lakh for the flagship Maruti Suzuki Invicto. It's lineup predominantly consists of 9 Hatchbacks, 3 Minivans, 3 Sedans, 6 SUVs and 4 MUVs.",
+    "models": [
+      { "name": "Maruti Suzuki FRONX",    "price": "₹6.85 - 11.98 Lakh*", "fuel": "Petrol/CNG", "kmpl": "22.89 kmpl", "transmission": "Manual/Automatic", "cc": "1197 cc", "bhp": "98.69 bhp", "seats": "5 Seats", "badge": "Facelift"  },
+      { "name": "Maruti Suzuki Ertiga",   "price": "₹8.80 - 12.94 Lakh*", "fuel": "Petrol/CNG", "kmpl": "20.51 kmpl", "transmission": "Manual/Automatic", "cc": "1462 cc", "bhp": "101.64 bhp","seats": "7 Seats", "badge": ""         },
+      { "name": "Maruti Suzuki Swift",    "price": "₹6.49 - 9.64 Lakh*",  "fuel": "Petrol",     "kmpl": "24.82 kmpl", "transmission": "Manual/Automatic", "cc": "1197 cc", "bhp": "88.50 bhp", "seats": "5 Seats", "badge": "Facelift"  },
+      { "name": "Maruti Suzuki e Vitara", "price": "₹15.99 - 20.01 Lakh*","fuel": "Electric",   "kmpl": "543 km",     "transmission": "Automatic",        "cc": "61 kWh",  "bhp": "172 bhp",   "seats": "5 Seats", "badge": "Electric"  },
+      { "name": "Maruti Suzuki Brezza",   "price": "₹8.26 - 13.01 Lakh*", "fuel": "Petrol/CNG", "kmpl": "19.89 kmpl", "transmission": "Manual/Automatic", "cc": "1462 cc", "bhp": "101.64 bhp","seats": "5 Seats", "badge": ""         },
+      { "name": "Maruti Suzuki Baleno",   "price": "₹5.99 - 9.10 Lakh*",  "fuel": "Petrol/CNG", "kmpl": "22.94 kmpl", "transmission": "Manual/Automatic", "cc": "1197 cc", "bhp": "88.5 bhp",  "seats": "5 Seats", "badge": "Facelift"  },
+      { "name": "Maruti Suzuki Dzire",    "price": "₹6.84 - 9.99 Lakh*",  "fuel": "Petrol/CNG", "kmpl": "24.79 kmpl", "transmission": "Manual/Automatic", "cc": "1197 cc", "bhp": "88.5 bhp",  "seats": "5 Seats", "badge": ""         },
+      { "name": "Maruti Suzuki Grand Vitara","price":"₹10.70 - 19.99 Lakh*","fuel":"Petrol/Hybrid","kmpl":"27.97 kmpl","transmission": "Manual/Automatic", "cc": "1462 cc", "bhp": "103 bhp",   "seats": "5 Seats", "badge": ""         }
+    ],
+    "discontinuedModels": [
+      { "name": "Maruti Swift",  "startingPrice": "₹1.00 Lakh" },
+      { "name": "Maruti SX4",    "startingPrice": "₹1.10 Lakh" },
+      { "name": "Maruti Ciaz",   "startingPrice": "₹3.55 Lakh" },
+      { "name": "Maruti Ertiga", "startingPrice": "₹3.80 Lakh" },
+      { "name": "Maruti XL6",    "startingPrice": "₹6.00 Lakh" }
+    ]
+  },
+  "Tata": {
+    "rating": "4.3",
+    "reviews": "8.1K",
+    "description": "Tata Motors has a total of 12 car models available in India right now, including 2 Hatchbacks, 7 SUVs, 1 Sedan and 2 EVs. The starting price for a Tata car is ₹4.70 Lakh for the Tiago.",
+    "models": [
+      { "name": "Tata Tiago",   "price": "₹4.70 - 8.55 Lakh*",   "fuel": "Petrol",  "kmpl": "19.18 kmpl", "transmission": "Manual/Automatic", "cc": "1199 cc", "bhp": "85 bhp",    "seats": "5 Seats", "badge": "Facelift"  },
+      { "name": "Tata Nexon",   "price": "₹7.37 - 14.32 Lakh*",  "fuel": "Petrol",  "kmpl": "17.44 kmpl", "transmission": "Manual/Automatic", "cc": "1199 cc", "bhp": "118.35 bhp","seats": "5 Seats", "badge": "New Variant"},
+      { "name": "Tata Harrier", "price": "₹12.89 - 25.85 Lakh*", "fuel": "Diesel",  "kmpl": "16.80 kmpl", "transmission": "Manual/Automatic", "cc": "1956 cc", "bhp": "168 bhp",   "seats": "5 Seats", "badge": "New Variant"},
+      { "name": "Tata Safari",  "price": "₹13.29 - 26.40 Lakh*", "fuel": "Diesel",  "kmpl": "16.22 kmpl", "transmission": "Manual/Automatic", "cc": "1956 cc", "bhp": "168 bhp",   "seats": "7 Seats", "badge": "New Variant"},
+      { "name": "Tata Punch",   "price": "₹5.65 - 10.60 Lakh*",  "fuel": "Petrol",  "kmpl": "18.82 kmpl", "transmission": "Manual/Automatic", "cc": "1199 cc", "bhp": "85 bhp",    "seats": "5 Seats", "badge": ""          },
+      { "name": "Tata Altroz",  "price": "₹6.30 - 10.77 Lakh*",  "fuel": "Petrol",  "kmpl": "19.15 kmpl", "transmission": "Manual/Automatic", "cc": "1199 cc", "bhp": "85 bhp",    "seats": "5 Seats", "badge": ""          }
+    ],
+    "discontinuedModels": [
+      { "name": "Tata Indica",  "startingPrice": "₹2.50 Lakh" },
+      { "name": "Tata Indigo",  "startingPrice": "₹3.00 Lakh" },
+      { "name": "Tata Nano",    "startingPrice": "₹1.50 Lakh" }
+    ]
+  },
+  "Hyundai": {
+    "rating": "4.4",
+    "reviews": "9.5K",
+    "description": "Hyundai offers a wide range of cars in India from budget hatchbacks to premium SUVs. The lineup includes popular models like Creta, Venue, i20, and the electric Ioniq 5.",
+    "models": [
+      { "name": "Hyundai Creta",    "price": "₹10.91 - 20.06 Lakh*", "fuel": "Petrol/Diesel", "kmpl": "17.40 kmpl", "transmission": "Manual/Automatic", "cc": "1497 cc", "bhp": "113.4 bhp", "seats": "5 Seats", "badge": "Facelift"   },
+      { "name": "Hyundai Venue",    "price": "₹7.94 - 13.28 Lakh*",  "fuel": "Petrol",        "kmpl": "18.15 kmpl", "transmission": "Manual/Automatic", "cc": "1197 cc", "bhp": "82.0 bhp",  "seats": "5 Seats", "badge": ""           },
+      { "name": "Hyundai i20",      "price": "₹7.04 - 11.21 Lakh*",  "fuel": "Petrol",        "kmpl": "20.35 kmpl", "transmission": "Manual/Automatic", "cc": "1197 cc", "bhp": "82.0 bhp",  "seats": "5 Seats", "badge": "Facelift"   },
+      { "name": "Hyundai Exter",    "price": "₹5.99 - 10.17 Lakh*",  "fuel": "Petrol",        "kmpl": "19.40 kmpl", "transmission": "Manual/Automatic", "cc": "1197 cc", "bhp": "82.0 bhp",  "seats": "5 Seats", "badge": "New Launch" },
+      { "name": "Hyundai Alcazar",  "price": "₹14.99 - 21.53 Lakh*", "fuel": "Petrol/Diesel", "kmpl": "14.20 kmpl", "transmission": "Manual/Automatic", "cc": "1497 cc", "bhp": "113.4 bhp", "seats": "7 Seats", "badge": ""           },
+      { "name": "Hyundai Tucson",   "price": "₹29.02 - 35.95 Lakh*", "fuel": "Petrol/Diesel", "kmpl": "14.11 kmpl", "transmission": "Automatic",        "cc": "1999 cc", "bhp": "153.5 bhp", "seats": "5 Seats", "badge": "Facelift"   }
+    ],
+    "discontinuedModels": [
+      { "name": "Hyundai Santro",  "startingPrice": "₹2.00 Lakh" },
+      { "name": "Hyundai i10",     "startingPrice": "₹2.50 Lakh" },
+      { "name": "Hyundai Accent",  "startingPrice": "₹3.00 Lakh" }
+    ]
+  },
+  "MG Motor": {
+    "rating": "4.5",
+    "reviews": "1.9K",
+    "description": "MG Motor has a total of 10 car models available in India right now, including 1 Hatchback, 6 SUVs, 2 MUVs and 1 Convertible. The starting price for a MG Motor car is ₹7.50 Lakh for the Comet EV.",
+    "models": [
+      { "name": "MG Windsor EV", "price": "₹13.50 - 15.50 Lakh*", "fuel": "Electric", "kmpl": "331 km",     "transmission": "Automatic",        "cc": "38 kWh",  "bhp": "134 bhp",   "seats": "5 Seats", "badge": "Electric"  },
+      { "name": "MG Hector",     "price": "₹13.99 - 21.99 Lakh*", "fuel": "Petrol",   "kmpl": "15.81 kmpl", "transmission": "Manual/Automatic", "cc": "1451 cc", "bhp": "141 bhp",   "seats": "5 Seats", "badge": ""          },
+      { "name": "MG Astor",      "price": "₹9.98 - 15.95 Lakh*",  "fuel": "Petrol",   "kmpl": "17.22 kmpl", "transmission": "Manual/Automatic", "cc": "1349 cc", "bhp": "108 bhp",   "seats": "5 Seats", "badge": ""          },
+      { "name": "MG Comet EV",   "price": "₹7.50 - 9.50 Lakh*",   "fuel": "Electric", "kmpl": "230 km",     "transmission": "Automatic",        "cc": "17.3 kWh","bhp": "41 bhp",    "seats": "4 Seats", "badge": "Electric"  },
+      { "name": "MG Gloster",    "price": "₹38.80 - 44.50 Lakh*", "fuel": "Diesel",   "kmpl": "13.96 kmpl", "transmission": "Automatic",        "cc": "1996 cc", "bhp": "215 bhp",   "seats": "7 Seats", "badge": ""          },
+      { "name": "MG ZS EV",      "price": "₹18.98 - 25.20 Lakh*", "fuel": "Electric", "kmpl": "461 km",     "transmission": "Automatic",        "cc": "50.3 kWh","bhp": "174 bhp",   "seats": "5 Seats", "badge": "Electric"  }
+    ],
+    "discontinuedModels": [
+      { "name": "MG Hector Plus", "startingPrice": "₹14.00 Lakh" }
+    ]
+  },
+  "Kia": {
+    "rating": "4.4",
+    "reviews": "6.8K",
+    "description": "Kia offers premium yet affordable cars in India. Their lineup includes Seltos, Sonet, Carens, and the electric EV6, with a focus on technology and design.",
+    "models": [
+      { "name": "Kia Seltos",       "price": "₹10.89 - 20.30 Lakh*", "fuel": "Petrol/Diesel", "kmpl": "16.50 kmpl", "transmission": "Manual/Automatic", "cc": "1497 cc", "bhp": "113.4 bhp", "seats": "5 Seats", "badge": "Facelift"   },
+      { "name": "Kia Sonet",        "price": "₹7.99 - 15.69 Lakh*",  "fuel": "Petrol/Diesel", "kmpl": "18.20 kmpl", "transmission": "Manual/Automatic", "cc": "1197 cc", "bhp": "118.4 bhp", "seats": "5 Seats", "badge": "Facelift"   },
+      { "name": "Kia Carens",       "price": "₹10.52 - 19.60 Lakh*", "fuel": "Petrol/Diesel", "kmpl": "16.10 kmpl", "transmission": "Manual/Automatic", "cc": "1497 cc", "bhp": "113.4 bhp", "seats": "7 Seats", "badge": ""           },
+      { "name": "Kia EV6",          "price": "₹60.97 - 65.97 Lakh*", "fuel": "Electric",      "kmpl": "528 km",     "transmission": "Automatic",        "cc": "77.4 kWh","bhp": "225 bhp",   "seats": "5 Seats", "badge": "Electric"   }
+    ],
+    "discontinuedModels": []
+  },
+  "Toyota": {
+    "rating": "4.3",
+    "reviews": "5.2K",
+    "description": "Toyota offers reliable and fuel-efficient cars in India. The lineup includes Innova Crysta, Fortuner, Urban Cruiser Hyryder, and the new Urban Cruiser EBELLA.",
+    "models": [
+      { "name": "Toyota Innova Crysta",     "price": "₹19.77 - 26.50 Lakh*", "fuel": "Petrol/Diesel", "kmpl": "14.70 kmpl", "transmission": "Manual/Automatic", "cc": "2393 cc", "bhp": "166.04 bhp","seats": "7 Seats", "badge": ""          },
+      { "name": "Toyota Fortuner",          "price": "₹33.43 - 50.57 Lakh*", "fuel": "Petrol/Diesel", "kmpl": "10.02 kmpl", "transmission": "Manual/Automatic", "cc": "2755 cc", "bhp": "201 bhp",   "seats": "7 Seats", "badge": "Facelift"  },
+      { "name": "Toyota Urban Cruiser EBELLA","price":"₹23.60 Lakh*",         "fuel": "Electric",      "kmpl": "543 km",     "transmission": "Automatic",        "cc": "72.8 kWh","bhp": "172 bhp",   "seats": "5 Seats", "badge": "Electric"  },
+      { "name": "Toyota Camry",             "price": "₹46.17 - 47.17 Lakh*", "fuel": "Petrol/Hybrid", "kmpl": "23.27 kmpl", "transmission": "Automatic",        "cc": "2487 cc", "bhp": "218 bhp",   "seats": "5 Seats", "badge": ""          }
+    ],
+    "discontinuedModels": [
+      { "name": "Toyota Etios", "startingPrice": "₹3.00 Lakh" },
+      { "name": "Toyota Liva",  "startingPrice": "₹2.50 Lakh" }
+    ]
+  },
+  "Honda": {
+    "rating": "4.2",
+    "reviews": "7.3K",
+    "description": "Honda offers sporty and reliable cars in India. Their lineup includes the City, Amaze, and Elevate SUV, known for their performance and safety features.",
+    "models": [
+      { "name": "Honda City",    "price": "₹12.00 - 21.00 Lakh*", "fuel": "Petrol",  "kmpl": "17.77 kmpl", "transmission": "Manual/Automatic", "cc": "1498 cc", "bhp": "119 bhp",   "seats": "5 Seats", "badge": "Facelift"  },
+      { "name": "Honda Amaze",   "price": "₹7.21 - 10.22 Lakh*",  "fuel": "Petrol",  "kmpl": "18.60 kmpl", "transmission": "Manual/Automatic", "cc": "1199 cc", "bhp": "89.7 bhp",  "seats": "5 Seats", "badge": ""          },
+      { "name": "Honda Elevate", "price": "₹11.69 - 16.99 Lakh*", "fuel": "Petrol",  "kmpl": "15.29 kmpl", "transmission": "Manual/Automatic", "cc": "1498 cc", "bhp": "119 bhp",   "seats": "5 Seats", "badge": "Facelift"  }
+    ],
+    "discontinuedModels": [
+      { "name": "Honda Jazz",   "startingPrice": "₹4.00 Lakh" },
+      { "name": "Honda WR-V",   "startingPrice": "₹3.50 Lakh" },
+      { "name": "Honda BR-V",   "startingPrice": "₹5.00 Lakh" }
+    ]
+  },
+  "Mahindra": {
+    "rating": "4.3",
+    "reviews": "8.9K",
+    "description": "Mahindra is known for its rugged SUVs and off-road vehicles. Their lineup includes Thar, Scorpio, XUV700, and the new electric BE 6 and XEV 9e.",
+    "models": [
+      { "name": "Mahindra Thar",   "price": "₹11.35 - 17.60 Lakh*", "fuel": "Petrol/Diesel", "kmpl": "15.20 kmpl", "transmission": "Manual/Automatic", "cc": "2184 cc", "bhp": "130 bhp",   "seats": "4 Seats", "badge": "Facelift"  },
+      { "name": "Mahindra Scorpio N","price":"₹13.99 - 24.54 Lakh*", "fuel": "Petrol/Diesel", "kmpl": "13.40 kmpl", "transmission": "Manual/Automatic", "cc": "2184 cc", "bhp": "130.49 bhp","seats": "7 Seats", "badge": ""          },
+      { "name": "Mahindra XUV700", "price": "₹13.99 - 26.99 Lakh*", "fuel": "Petrol/Diesel", "kmpl": "13.31 kmpl", "transmission": "Manual/Automatic", "cc": "2184 cc", "bhp": "182 bhp",   "seats": "7 Seats", "badge": "Facelift"  },
+      { "name": "Mahindra BE 6",   "price": "₹18.90 - 26.90 Lakh*", "fuel": "Electric",      "kmpl": "682 km",     "transmission": "Automatic",        "cc": "79 kWh",  "bhp": "228 bhp",   "seats": "5 Seats", "badge": "Electric"  }
+    ],
+    "discontinuedModels": [
+      { "name": "Mahindra Bolero Power+", "startingPrice": "₹5.00 Lakh" },
+      { "name": "Mahindra KUV100",        "startingPrice": "₹4.00 Lakh" }
+    ]
+  },
+  "Skoda": {
+    "rating": "4.2",
+    "reviews": "3.1K",
+    "description": "Skoda offers premium European cars in India with a focus on build quality and safety. Their lineup includes Kushaq, Slavia, Kodiaq, and the upcoming Superb.",
+    "models": [
+      { "name": "Skoda Kushaq",  "price": "₹10.69 - 18.99 Lakh*", "fuel": "Petrol", "kmpl": "15.00 kmpl", "transmission": "Manual/Automatic", "cc": "1498 cc", "bhp": "148 bhp",  "seats": "5 Seats", "badge": "Facelift"  },
+      { "name": "Skoda Slavia",  "price": "₹10.69 - 19.19 Lakh*", "fuel": "Petrol", "kmpl": "18.74 kmpl", "transmission": "Manual/Automatic", "cc": "999 cc",  "bhp": "113.4 bhp","seats": "5 Seats", "badge": "Facelift"  },
+      { "name": "Skoda Kodiaq",  "price": "₹34.99 - 35.99 Lakh*", "fuel": "Petrol", "kmpl": "13.47 kmpl", "transmission": "Automatic",        "cc": "1984 cc", "bhp": "187 bhp",  "seats": "7 Seats", "badge": "New Launch" },
+      { "name": "Skoda Superb",  "price": "₹50.00 Lakh*",          "fuel": "Petrol", "kmpl": "14.01 kmpl", "transmission": "Automatic",        "cc": "1984 cc", "bhp": "187 bhp",  "seats": "5 Seats", "badge": "New Launch" }
+    ],
+    "discontinuedModels": [
+      { "name": "Skoda Rapid",  "startingPrice": "₹5.00 Lakh" },
+      { "name": "Skoda Octavia","startingPrice": "₹8.00 Lakh" }
+    ]
+  },
+  "Jeep": {
+    "rating": "4.1",
+    "reviews": "2.4K",
+    "description": "Jeep offers premium off-road capable SUVs in India. Their lineup includes Meridian, Compass, and Wrangler, known for their off-road prowess and premium features.",
+    "models": [
+      { "name": "Jeep Compass",   "price": "₹19.99 - 30.39 Lakh*", "fuel": "Petrol/Diesel", "kmpl": "13.99 kmpl", "transmission": "Manual/Automatic", "cc": "1956 cc", "bhp": "168 bhp",  "seats": "5 Seats", "badge": "Facelift"  },
+      { "name": "Jeep Meridian",  "price": "₹29.90 - 36.95 Lakh*", "fuel": "Diesel",        "kmpl": "11.09 kmpl", "transmission": "Manual/Automatic", "cc": "1956 cc", "bhp": "168 bhp",  "seats": "7 Seats", "badge": ""          },
+      { "name": "Jeep Wrangler",  "price": "₹67.65 - 72.65 Lakh*", "fuel": "Petrol",        "kmpl": "11.20 kmpl", "transmission": "Automatic",        "cc": "1995 cc", "bhp": "268 bhp",  "seats": "5 Seats", "badge": ""          }
+    ],
+    "discontinuedModels": []
+  },
+  "Renault": {
+    "rating": "4.0",
+    "reviews": "4.1K",
+    "description": "Renault offers value-for-money cars in India with strong focus on space and features. Their lineup includes Kwid, Triber, Kiger, and the new Duster.",
+    "models": [
+      { "name": "Renault Kwid",   "price": "₹4.70 - 6.45 Lakh*",  "fuel": "Petrol", "kmpl": "22.30 kmpl", "transmission": "Manual/Automatic", "cc": "999 cc",  "bhp": "67.06 bhp", "seats": "5 Seats", "badge": ""          },
+      { "name": "Renault Triber", "price": "₹6.00 - 8.97 Lakh*",  "fuel": "Petrol", "kmpl": "18.97 kmpl", "transmission": "Manual/Automatic", "cc": "999 cc",  "bhp": "71.85 bhp", "seats": "7 Seats", "badge": ""          },
+      { "name": "Renault Kiger",  "price": "₹6.00 - 11.23 Lakh*", "fuel": "Petrol", "kmpl": "20.53 kmpl", "transmission": "Manual/Automatic", "cc": "999 cc",  "bhp": "71.85 bhp", "seats": "5 Seats", "badge": "Facelift"  },
+      { "name": "Renault Duster", "price": "₹9.99 - 14.99 Lakh*", "fuel": "Petrol", "kmpl": "15.00 kmpl", "transmission": "Manual/Automatic", "cc": "1333 cc", "bhp": "154 bhp",   "seats": "5 Seats", "badge": "New Launch" }
+    ],
+    "discontinuedModels": [
+      { "name": "Renault Fluence", "startingPrice": "₹5.00 Lakh" },
+      { "name": "Renault Scala",   "startingPrice": "₹4.00 Lakh" }
+    ]
+  },
+  "Nissan": {
+    "rating": "4.0",
+    "reviews": "2.8K",
+    "description": "Nissan offers a range of cars in India from compact SUVs to performance vehicles. Their lineup includes Magnite, and the upcoming Terrano 2025.",
+    "models": [
+      { "name": "Nissan Magnite",  "price": "₹6.00 - 11.60 Lakh*", "fuel": "Petrol", "kmpl": "20.02 kmpl", "transmission": "Manual/Automatic", "cc": "999 cc",  "bhp": "99 bhp",    "seats": "5 Seats", "badge": "Facelift"  },
+      { "name": "Nissan Gravite",  "price": "₹5.65 - 9.18 Lakh*",  "fuel": "CNG",    "kmpl": "19.3 km/kg", "transmission": "Manual",           "cc": "999 cc",  "bhp": "67 bhp",    "seats": "5 Seats", "badge": "New Launch" }
+    ],
+    "discontinuedModels": [
+      { "name": "Nissan Micra",  "startingPrice": "₹3.00 Lakh" },
+      { "name": "Nissan Sunny",  "startingPrice": "₹4.00 Lakh" },
+      { "name": "Nissan Terrano","startingPrice": "₹5.00 Lakh" }
+    ]
+  }
+}

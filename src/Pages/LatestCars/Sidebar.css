@@ -1,7 +1,4 @@
-.sidebar {
-  width: 280px;
-  flex-shrink: 0;
-}
+.sidebar { width: 280px; flex-shrink: 0; }
 
 .sidebar-card {
   border: 1px solid #e8e8e8;
@@ -12,37 +9,38 @@
 }
 
 .sidebar-card h3 {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   margin-bottom: 14px;
   color: #1a1a1a;
 }
 
-/* ── Brands Grid ── */
 .brands-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 12px;
 }
 
 .brand-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   cursor: pointer;
   padding: 8px 4px;
   border-radius: 8px;
   transition: background 0.2s;
+  border: 1px solid transparent;
 }
 
 .brand-item:hover {
   background: #f5f5f5;
+  border-color: #eee;
 }
 
 .brand-item img {
-  width: 70px;
-  height: 35px;
+  width: 65px;
+  height: 34px;
   object-fit: contain;
 }
 
@@ -50,10 +48,8 @@
   font-size: 11px;
   color: #555;
   text-align: center;
-  font-weight: 500;
 }
 
-/* ── View All ── */
 .view-all {
   color: #e8590c;
   font-size: 13px;
@@ -65,27 +61,22 @@
   gap: 4px;
 }
 
-.view-all:hover {
-  text-decoration: underline;
-}
+.view-all:hover { text-decoration: underline; }
 
-/* ── Car Items ── */
 .sidebar-car-item {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   padding: 8px 0;
   border-bottom: 1px solid #f0f0f0;
   cursor: pointer;
 }
 
-.sidebar-car-item:hover {
-  background: #fafafa;
-}
+.sidebar-car-item:last-of-type { border-bottom: none; }
 
 .sidebar-car-img {
-  width: 70px;
-  height: 45px;
+  width: 68px;
+  height: 44px;
   object-fit: cover;
   border-radius: 6px;
   flex-shrink: 0;
@@ -93,27 +84,20 @@
 }
 
 .sidebar-car-name {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 2px;
 }
 
 .sidebar-car-price {
-  font-size: 12px;
+  font-size: 11px;
   color: #444;
   display: flex;
   align-items: center;
   gap: 4px;
 }
 
-.estimated {
-  color: #888;
-  font-size: 11px;
-}
+.estimated { color: #888; font-size: 10px; }
 
-.launch-date {
-  font-size: 11px;
-  color: #888;
-  margin-top: 2px;
-}
+.launch-date { font-size: 10px; color: #888; margin-top: 2px; }
