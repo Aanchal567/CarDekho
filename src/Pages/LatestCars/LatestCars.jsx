@@ -1,29 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import "./LatestCars.css";
 import Navbar from "../../Navbar/Navbar";
 import CarGrid from "./CarGrid";
-import Footer from "../LatestCars/Footer";
 import Sidebar from "./Sidebar";
 import FindRightCar from "./FindRightCar";
 import FAQ from "./FAQ";
 import TrustBadges from "./TrustBadges";
-import BrandPage from "./BrandPage/Brandpage";
+import Footer from "./Footer";
 import bannerImg from "../../assets/latestcar_banner_1.avif";
-
-
+import { useNavigate } from "react-router-dom";
 
 const LatestCars = () => {
-  const [selectedBrand, setSelectedBrand] = useState(null);
+  const navigate = useNavigate();
 
-  if (selectedBrand) {
-    return (
-      <BrandPage
-        brand={selectedBrand}
-        onBack={() => setSelectedBrand(null)}
-        onBrandClick={setSelectedBrand}
-      />
-    );
-  }
+  const handleBrandClick = (brandName) => {
+    const slug = brandName.toLowerCase().replace(/ /g, "-");
+    navigate(`/${slug}-cars`);
+  };
 
   return (
     <div className="latest-cars-page">
@@ -35,7 +28,7 @@ const LatestCars = () => {
           <FindRightCar />
           <FAQ />
         </div>
-        <Sidebar onBrandClick={setSelectedBrand} />
+        <Sidebar onBrandClick={handleBrandClick} />
       </div>
       <TrustBadges />
       <Footer />

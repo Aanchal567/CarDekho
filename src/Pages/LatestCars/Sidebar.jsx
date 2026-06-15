@@ -1,5 +1,6 @@
 import React from "react";
 import "./Sidebar.css";
+import { useNavigate } from "react-router-dom";
 import sideImg1  from "../../assets/side_image1.jpg";
 import sideImg2  from "../../assets/side_image2.jpg";
 import sideImg3  from "../../assets/side_image3.jpg";
@@ -51,52 +52,67 @@ const upcomingCars = [
   { name: "Renault Bigster",     price: "₹12 Lakh", date: "Jun 15, 2026", img: car2  },
 ];
 
-const Sidebar = ({ onBrandClick }) => (
-  <aside className="sidebar">
+const Sidebar = ({ onBrandClick }) => {
+  const navigate = useNavigate();
 
-    <div className="sidebar-card">
-      <h3>Popular car brands</h3>
-      <div className="brands-grid">
-        {brands.map((b, i) => (
-          <div key={i} className="brand-item" onClick={() => onBrandClick && onBrandClick(b.name)}>
-            <img src={b.logo} alt={b.name} />
-            <span>{b.name}</span>
+  const handleBrandClick = (brandName) => {
+    const slug = brandName.toLowerCase().replace(/ /g, "-");
+    navigate(`/${slug}-cars`);
+  };
+
+  return (
+    <aside className="sidebar">
+
+      <div className="sidebar-card">
+        <h3>Popular car brands</h3>
+        <div className="brands-grid">
+          {brands.map((b, i) => (
+            <div
+              key={i}
+              className="brand-item"
+              onClick={() => handleBrandClick(b.name)}
+            >
+              <img src={b.logo} alt={b.name} />
+              <span>{b.name}</span>
+            </div>
+          ))}
+        </div>
+        <div className="view-all">View All Car Brands →</div>
+      </div>
+
+      <div className="sidebar-card">
+        <h3>Popular cars</h3>
+        {popularCars.map((c, i) => (
+          <div key={i} className="sidebar-car-item">
+            <img src={c.img} alt={c.name} className="sidebar-car-img" />
+            <div>
+              <div className="sidebar-car-name">{c.name}</div>
+              <div className="sidebar-car-price">{c.price}</div>
+            </div>
           </div>
         ))}
+        <div className="view-all">View All Best Cars →</div>
       </div>
-      <div className="view-all">View All Car Brands →</div>
-    </div>
 
-    <div className="sidebar-card">
-      <h3>Popular cars</h3>
-      {popularCars.map((c, i) => (
-        <div key={i} className="sidebar-car-item">
-          <img src={c.img} alt={c.name} className="sidebar-car-img" />
-          <div>
-            <div className="sidebar-car-name">{c.name}</div>
-            <div className="sidebar-car-price">{c.price}</div>
+      <div className="sidebar-card">
+        <h3>Upcoming cars</h3>
+        {upcomingCars.map((c, i) => (
+          <div key={i} className="sidebar-car-item">
+            <img src={c.img} alt={c.name} className="sidebar-car-img" />
+            <div>
+              <div className="sidebar-car-name">{c.name}</div>
+              <div className="sidebar-car-price">
+                {c.price} <span className="estimated">Estimated</span>
+              </div>
+              <div className="launch-date">{c.date} Expected Launch</div>
+            </div>
           </div>
-        </div>
-      ))}
-      <div className="view-all">View All Best Cars →</div>
-    </div>
+        ))}
+        <div className="view-all">View All Upcoming Cars →</div>
+      </div>
 
-    <div className="sidebar-card">
-      <h3>Upcoming cars</h3>
-      {upcomingCars.map((c, i) => (
-        <div key={i} className="sidebar-car-item">
-          <img src={c.img} alt={c.name} className="sidebar-car-img" />
-          <div>
-            <div className="sidebar-car-name">{c.name}</div>
-            <div className="sidebar-car-price">{c.price} <span className="estimated">Estimated</span></div>
-            <div className="launch-date">{c.date} Expected Launch</div>
-          </div>
-        </div>
-      ))}
-      <div className="view-all">View All Upcoming Cars →</div>
-    </div>
-
-  </aside>
-);
+    </aside>
+  );
+};
 
 export default Sidebar;
