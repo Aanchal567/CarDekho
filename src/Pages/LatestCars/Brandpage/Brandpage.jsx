@@ -4,6 +4,9 @@ import Navbar from "../../../Navbar/Navbar";
 import Footer from "../Footer";
 import brandsData from "../../../data/brandsData.json";
 import { useParams, useNavigate } from "react-router-dom";
+import { useApp } from "../../../context/AppContext";
+import { allCars } from "../../../data/carsData";
+import CarDetailsModal from "../CarDetailsModal";
 
 import sideImg1  from "../../../assets/side_image1.jpg";
 import sideImg2  from "../../../assets/side_image2.jpg";
@@ -106,9 +109,9 @@ const badgeIcon = (badge) => {
 const BrandPage = () => {
   const { brandSlug } = useParams();
   const navigate = useNavigate();
+  const { city, wishlist, toggleWishlist, selectedCar, setSelectedCar } = useApp();
   const [activeTab, setActiveTab] = useState("CARS");
   const [expanded, setExpanded] = useState(false);
-  const [likedCars, setLikedCars] = useState({});
 
   // Extract brand name from slug — e.g. "maruti-suzuki-cars" → "maruti-suzuki"
   const slugKey = brandSlug?.replace(/-cars$/, "") || "maruti-suzuki";
@@ -122,8 +125,31 @@ const BrandPage = () => {
     navigate(`/${slug}-cars`);
   };
 
-  const toggleLike = (index) => {
-    setLikedCars(prev => ({ ...prev, [index]: !prev[index] }));
+  const getCarObject = (car, i) => {
+    return allCars.find(c => c.name === car.name) || {
+      name: car.name,
+      brand: brand,
+      priceRaw: car.price,
+      fuel: car.fuel,
+      transmission: car.transmission,
+      cc: car.cc,
+      bhp: car.bhp,
+      seats: car.seats,
+      badge: car.badge || "",
+      img: carImages[i % carImages.length],
+      rating: data.rating,
+      reviews: data.reviews,
+      description: data.description
+    };
+  };
+
+  const handleToggleLike = (car, i) => {
+    const carObj = getCarObject(car, i);
+    toggleWishlist(carObj);
+  };
+
+  const isLiked = (carName) => {
+    return wishlist.some(item => item.name === carName);
   };
 
   return (
@@ -151,7 +177,7 @@ const BrandPage = () => {
           <div className="brand-title-row">
             <h1>{brand} cars</h1>
             <div className="brand-rating">
-              <span className="rating-num">{data.rating}/s</span>
+              <span className="rating-num">{data.rating}/5</span>
               <span className="rating-star">⭐</span>
               <span className="rating-reviews">| {data.reviews} reviews</span>
             </div>
@@ -175,7 +201,7 @@ const BrandPage = () => {
 
           {/* Car Model Cards */}
           {data.models.map((car, i) => (
-            <div key={i} className="brand-car-card">
+            <div key={i} className="brand-car-card" onClick={() => setSelectedCar(getCarObject(car, i))}>
               <div className="brand-car-img-wrap">
                 <img src={carImages[i % carImages.length]} alt={car.name} />
                 {car.badge && (
@@ -187,7 +213,7 @@ const BrandPage = () => {
               <div className="brand-car-info">
                 <h3>{car.name}</h3>
                 <div className="model-price">
-                  {car.price}*
+                  {car.price}
                   <span className="view-road-price">(View On Road Price)</span>
                 </div>
                 <div className="model-specs">
@@ -196,14 +222,25 @@ const BrandPage = () => {
                 <div className="model-specs-row2">
                   {car.cc} • {car.bhp} • {car.seats}
                 </div>
-                <button className="view-offers-btn">View June Offers</button>
+                <button 
+                  className="view-offers-btn"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedCar(getCarObject(car, i));
+                  }}
+                >
+                  View June Offers
+                </button>
               </div>
               <button
                 className="heart-btn"
-                onClick={() => toggleLike(i)}
-                style={{ color: likedCars[i] ? "#e8590c" : "#ccc" }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleToggleLike(car, i);
+                }}
+                style={{ color: isLiked(car.name) ? "#f75d34" : "#ccc" }}
               >
-                {likedCars[i] ? "❤️" : "🤍"}
+                {isLiked(car.name) ? "❤️" : "🤍"}
               </button>
             </div>
           ))}
@@ -255,7 +292,7 @@ const BrandPage = () => {
           {/* Popular Used Cars */}
           {data.discontinuedModels && data.discontinuedModels.length > 0 && (
             <div className="brand-sidebar-card">
-              <h3>Popular {brand} used cars in Jaipur</h3>
+              <h3>Popular {brand} used cars in {city}</h3>
               {data.discontinuedModels.map((car, i) => (
                 <div key={i} className="used-car-item">
                   <div className="used-car-thumb">
@@ -268,7 +305,7 @@ const BrandPage = () => {
                 </div>
               ))}
               <div className="view-used-link">
-                View All Used {brand} Cars in Jaipur →
+                View All Used {brand} Cars in {city} →
               </div>
             </div>
           )}
@@ -277,6 +314,9 @@ const BrandPage = () => {
       </div>
 
       <Footer />
+
+      {/* Details Modal on Brand Page */}
+      {selectedCar && <CarDetailsModal />}
     </div>
   );
 };

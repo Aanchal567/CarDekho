@@ -4,14 +4,14 @@ import { useNavigate } from "react-router-dom";
 import "./Dropdown.css";
 
 const menuItems = [
-  { label: "News & Top stories", path: "/car-news?tab=news" },
-  { label: "Car Expert Reviews", path: "/car-news?tab=expert" },
-  { label: "User Reviews", path: "/car-news?tab=user" },
-  { label: "Car Collection", path: "/car-news?tab=collection" },
-  { label: "Tips & Advice", path: "/car-news?tab=tips" },
+  { label: "Buy Used Cars", path: "/used-cars" },
+  { label: "Used Cars In Your City", path: "/used-cars?city=local" },
+  { label: "Sell My Car", path: "/sell-my-car" },
+  { label: "Used Car Valuation", path: "/used-cars?tab=valuation" },
+  { label: "Dealership Near Me", path: "/used-cars?tab=dealers" },
 ];
 
-function NewsDropdown() {
+function UsedCarsDropdown() {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -22,7 +22,7 @@ function NewsDropdown() {
 
   return (
     <div className="dropdown" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-      <span className="menu-label">NEWS & REVIEWS <ChevronDown size={14} /></span>
+      <span className="menu-label">USED CARS <ChevronDown size={14} /></span>
       {open && (
         <div className="dropdown-menu">
           {menuItems.map((item, i) => (
@@ -39,4 +39,5 @@ function NewsDropdown() {
     </div>
   );
 }
-export default NewsDropdown;
+
+export default UsedCarsDropdown;

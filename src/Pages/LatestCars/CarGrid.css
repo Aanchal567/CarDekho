@@ -1,17 +1,48 @@
-.car-grid-section { margin-bottom: 24px; }
+.car-grid-section { 
+  margin-bottom: 24px; 
+}
+
+.grid-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
 
 .section-title {
   font-size: 22px;
   font-weight: 700;
   color: #1a1a1a;
-  margin-bottom: 8px;
+  margin: 0;
+}
+
+.clear-filters-btn {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Lato", sans-serif;
+  color: #666;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.clear-filters-btn:hover {
+  border-color: #f75d34;
+  color: #f75d34;
+  background: rgba(247, 93, 52, 0.04);
 }
 
 .section-desc {
   font-size: 13px;
   color: #666;
   line-height: 1.6;
-  margin-bottom: 4px;
+  margin-bottom: 12px;
 }
 
 .read-more {
@@ -132,6 +163,72 @@
   border-radius: 6px;
   cursor: pointer;
   font-family: "Lato", sans-serif;
+  transition: all 0.2s ease;
 }
 
-.load-more-btn:hover { background: #fff3e0; }
+.load-more-btn:hover { 
+  background: #fff3e0; 
+  transform: translateY(-2px);
+}
+
+/* ── Card Heart Button ── */
+.card-heart-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-heart-btn:hover {
+  transform: scale(1.15);
+  background: #ffffff;
+}
+
+/* ── No Cars Found State ── */
+.no-cars-found {
+  text-align: center;
+  padding: 50px 20px;
+  background: #fdfdfd;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.no-cars-found h3 {
+  font-size: 18px;
+  color: #24272c;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.no-cars-found p {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 16px;
+}
+
+.reset-btn {
+  padding: 10px 24px;
+  background: #e8590c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.reset-btn:hover {
+  background: #d04d08;
+}

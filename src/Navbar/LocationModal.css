@@ -38,10 +38,72 @@
 .modal-input {
   width: 100%;
   padding: 18px 16px;
-  border: none;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  background: #f2f2f2;
+  background: #fdfdfd;
   font-size: 16px;
   font-family: "Lato", sans-serif;
   outline: none;
+  transition: all 0.3s ease;
+}
+
+.modal-input:focus {
+  border-color: #f75d34;
+  box-shadow: 0 0 8px rgba(247, 93, 52, 0.15);
+}
+
+.popular-cities-section {
+  margin-top: 30px;
+}
+
+.popular-cities-section h3 {
+  font-size: 16px;
+  color: #24272c;
+  margin-bottom: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  text-align: left;
+}
+
+.popular-cities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.popular-city-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #fff;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.popular-city-card:hover {
+  border-color: #f75d34;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(247, 93, 52, 0.08);
+}
+
+.city-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.city-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  font-family: "Lato", sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+  .popular-cities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

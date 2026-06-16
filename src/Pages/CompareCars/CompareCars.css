@@ -1,0 +1,260 @@
+.compare-page {
+  font-family: "Lato", sans-serif;
+  background-color: #f8f9fa;
+  color: #24272c;
+}
+
+.compare-hero {
+  background: linear-gradient(135deg, #374151 0%, #111827 100%);
+  color: white;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.compare-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 30px 60px;
+}
+
+/* ── Selection Row ── */
+.compare-selection-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.select-box-card {
+  flex: 1;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.select-box-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #475569;
+}
+
+.car-selector {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.car-selector:focus {
+  border-color: #f75d34;
+}
+
+.selected-car-preview {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.selected-car-preview img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.selected-car-preview h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.vs-badge {
+  background: #f75d34;
+  color: white;
+  font-size: 16px;
+  font-weight: 900;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(247, 93, 52, 0.3);
+  z-index: 2;
+}
+
+/* ── Result Board ── */
+.compare-results-section {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.compare-results-section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #0f172a;
+}
+
+.compare-table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.compare-row {
+  display: flex;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background 0.2s ease;
+}
+
+.compare-row:last-child {
+  border-bottom: none;
+}
+
+.compare-row:hover {
+  background: #f8fafc;
+}
+
+.header-row {
+  background: #f1f5f9;
+  font-weight: 700;
+}
+
+.header-row:hover {
+  background: #f1f5f9;
+}
+
+.compare-label {
+  flex: 1;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #475569;
+  border-right: 1px solid #e2e8f0;
+  background: #fafafa;
+}
+
+.compare-val-col {
+  flex: 1.5;
+  padding: 16px;
+  font-size: 14px;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-right: 1px solid #e2e8f0;
+}
+
+.compare-val-col:last-child {
+  border-right: none;
+}
+
+.font-bold {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* ── Winner spec coloring ── */
+.better-spec {
+  background: #f0fdf4;
+  color: #15803d;
+  font-weight: 600;
+}
+
+.won-badge {
+  background: #dcfce7;
+  color: #166534;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+/* ── Placeholder Board ── */
+.compare-placeholder-board {
+  background: white;
+  border: 1px dashed #cbd5e1;
+  border-radius: 16px;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.placeholder-board-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.compare-placeholder-board h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+.compare-placeholder-board p {
+  font-size: 13px;
+  color: #64748b;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+/* Animations */
+.animate-fade {
+  animation: fadeIn 0.4s ease;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(15px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media screen and (max-width: 768px) {
+  .compare-selection-row {
+    flex-direction: column;
+  }
+  .vs-badge {
+    transform: rotate(90deg);
+  }
+  .compare-row {
+    flex-direction: column;
+  }
+  .compare-label {
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .compare-val-col {
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .compare-val-col:last-child {
+    border-bottom: none;
+  }
+}

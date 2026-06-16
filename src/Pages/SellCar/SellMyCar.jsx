@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./SellMyCar.css";
 import Navbar from "../../Navbar/Navbar";
 import Footer from "../LatestCars/Footer";
+import thumbsup from "../../assets/thumbs_up.jpg";
+import { useApp } from "../../context/AppContext";
 
 const FaqItem = ({ question, answer }) => {
   const [open, setOpen] = useState(false);
@@ -17,8 +19,218 @@ const FaqItem = ({ question, answer }) => {
 };
 
 const SellMyCar = () => {
+  const { city } = useApp();
+
+  // Form states
+  const [brand, setBrand] = useState("");
+  const [model, setModel] = useState("");
+  const [year, setYear] = useState("2020");
+  const [kms, setKms] = useState("");
+  const [expectedPrice, setExpectedPrice] = useState("");
+  const [phone, setPhone] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleSellSubmit = (e) => {
+    e.preventDefault();
+    if (!brand || !model || !kms || !expectedPrice || !phone) return;
+
+    setIsSubmitting(true);
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setIsSuccess(true);
+    }, 1200);
+  };
+
+  const handleResetForm = () => {
+    setBrand("");
+    setModel("");
+    setYear("2020");
+    setKms("");
+    setExpectedPrice("");
+    setPhone("");
+    setIsSuccess(false);
+  };
+
   return (
     <>
+    <Navbar/>
+      {/* SELL HERO SECTION WITH FORM */}
+      <div className="sell-hero-section">
+        <div className="sell-hero-inner">
+          <div className="sell-hero-left">
+            <h1>Sell your car at the <br /><span className="accent-color">Best Price</span> from home</h1>
+            <p className="sell-hero-desc">Over 3.5 Lakh+ cars sold. Get 100% free listing visibility, instant online valuation, and complete documentation assistance in {city}.</p>
+            
+            <div className="sell-bullets">
+              <div className="bullet-item">
+                <span className="bullet-icon">💵</span>
+                <div>
+                  <h4>Zero Commission Fees</h4>
+                  <p>You keep 100% of the sale price. No hidden charges.</p>
+                </div>
+              </div>
+              <div className="bullet-item">
+                <span className="bullet-icon">⚡</span>
+                <div>
+                  <h4>Instant Buyer Offers</h4>
+                  <p>Get inspected by CarDekho trust partners and receive deals in 24 hours.</p>
+                </div>
+              </div>
+              <div className="bullet-item">
+                <span className="bullet-icon">📝</span>
+                <div>
+                  <h4>Free RC Transfer</h4>
+                  <p>We handle all documentation transfers and paperwork for free.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="sell-hero-right">
+            <div className="sell-form-card">
+              {isSuccess ? (
+                <div className="sell-success-state">
+                  <div className="success-checkmark">✅</div>
+                  <h3>Listing Published!</h3>
+                  <p>Congratulations, your <strong>{year} {brand} {model}</strong> is now live on CarDekho Central registry for <strong>{city}</strong>.</p>
+                  <p className="success-desc">
+                    Our partner buyers in {city} will start matching your listing. We will send you buyer offer updates via SMS and calls at <strong>{phone}</strong>.
+                  </p>
+                  <button className="sell-another-btn" onClick={handleResetForm}>
+                    List Another Car
+                  </button>
+                </div>
+              ) : (
+                <form onSubmit={handleSellSubmit} className="sell-car-form">
+                  <h3>Get Instant Buyer Matches</h3>
+                  <p className="form-sub">List your vehicle for free today</p>
+                  
+                  <div className="form-group-sell">
+                    <label>Brand</label>
+                    <select value={brand} onChange={e => setBrand(e.target.value)} required>
+                      <option value="">Select Brand</option>
+                      <option value="Maruti Suzuki">Maruti Suzuki</option>
+                      <option value="Hyundai">Hyundai</option>
+                      <option value="Honda">Honda</option>
+                      <option value="Tata">Tata</option>
+                      <option value="Toyota">Toyota</option>
+                      <option value="Mahindra">Mahindra</option>
+                    </select>
+                  </div>
+
+                  <div className="form-row-sell">
+                    <div className="form-group-sell">
+                      <label>Model</label>
+                      <select value={model} onChange={e => setModel(e.target.value)} required>
+                        <option value="">Select Model</option>
+                        {brand === "Maruti Suzuki" && (
+                          <>
+                            <option value="Swift">Swift</option>
+                            <option value="Baleno">Baleno</option>
+                            <option value="Dzire">Dzire</option>
+                          </>
+                        )}
+                        {brand === "Tata" && (
+                          <>
+                            <option value="Nexon">Nexon</option>
+                            <option value="Tiago">Tiago</option>
+                            <option value="Punch">Punch</option>
+                          </>
+                        )}
+                        {brand === "Hyundai" && (
+                          <>
+                            <option value="Creta">Creta</option>
+                            <option value="i20">i20</option>
+                            <option value="Exter">Exter</option>
+                          </>
+                        )}
+                        {brand === "Honda" && (
+                          <>
+                            <option value="City">City</option>
+                            <option value="Amaze">Amaze</option>
+                          </>
+                        )}
+                        {brand === "Toyota" && (
+                          <>
+                            <option value="Fortuner">Fortuner</option>
+                            <option value="Innova">Innova</option>
+                          </>
+                        )}
+                        {brand === "Mahindra" && (
+                          <>
+                            <option value="Thar">Thar</option>
+                            <option value="Scorpio">Scorpio</option>
+                            <option value="XUV700">XUV700</option>
+                          </>
+                        )}
+                        {!brand && <option value="" disabled>Select Brand First</option>}
+                      </select>
+                    </div>
+
+                    <div className="form-group-sell">
+                      <label>Year</label>
+                      <select value={year} onChange={e => setYear(e.target.value)}>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="form-row-sell">
+                    <div className="form-group-sell">
+                      <label>KM Driven</label>
+                      <input 
+                        type="number" 
+                        placeholder="e.g. 45000" 
+                        value={kms} 
+                        onChange={e => setKms(e.target.value)} 
+                        min={0}
+                        required 
+                      />
+                    </div>
+
+                    <div className="form-group-sell">
+                      <label>Expected Price (Lakhs)</label>
+                      <input 
+                        type="text" 
+                        placeholder="e.g. 6.5" 
+                        value={expectedPrice} 
+                        onChange={e => setExpectedPrice(e.target.value)} 
+                        required 
+                      />
+                    </div>
+                  </div>
+
+                  <div className="form-group-sell">
+                    <label>Mobile Number</label>
+                    <input 
+                      type="tel" 
+                      placeholder="Enter mobile number" 
+                      value={phone} 
+                      onChange={e => setPhone(e.target.value)} 
+                      required 
+                    />
+                  </div>
+
+                  <button type="submit" className="submit-listing-btn" disabled={isSubmitting}>
+                    {isSubmitting ? "Submitting Listing..." : "List My Car For Free"}
+                  </button>
+                </form>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
       {/* HOW IT WORKS */}
       <div className="how-works-section">
         <div className="how-works-inner">
@@ -64,7 +276,7 @@ const SellMyCar = () => {
 
           <div className="how-works-right">
             <div className="how-works-img-placeholder">
-              🤝
+              <img src={thumbsup} alt="Sell My Car" />
             </div>
           </div>
         </div>
@@ -181,6 +393,7 @@ const SellMyCar = () => {
         <span className="bc-sep"> › </span>
         <span className="bc-current">Sell Car</span>
       </div>
+      <Footer/>
     </>
   );
 };

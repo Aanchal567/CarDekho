@@ -343,6 +343,12 @@
   color: #e8590c;
   cursor: pointer;
 }
+.how-works-img-placeholder img {
+  width: 333px;
+  height: 277px;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
 .city-link:hover { text-decoration: underline; }
 
@@ -357,3 +363,241 @@
 .bc-home { color: #e8590c; cursor: pointer; }
 .bc-sep { color: #999; margin: 0 4px; }
 .bc-current { color: #666; }
+
+/* ── Sell Hero Section & Bullet Cards ── */
+.sell-hero-section {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: white;
+  padding: 60px 40px;
+  text-align: left;
+}
+
+.sell-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.sell-hero-left {
+  flex: 1.2;
+}
+
+.sell-hero-left h1 {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.accent-color {
+  color: #f75d34;
+}
+
+.sell-hero-desc {
+  font-size: 15px;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.sell-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bullet-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.bullet-icon {
+  font-size: 24px;
+  background: rgba(255,255,255,0.06);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.bullet-item h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 4px;
+}
+
+.bullet-item p {
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Sell Form Card ── */
+.sell-hero-right {
+  flex: 0.8;
+  min-width: 380px;
+}
+
+.sell-form-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3);
+  color: #24272c;
+}
+
+.sell-car-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.sell-car-form h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 2px;
+}
+
+.form-sub {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.form-group-sell {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group-sell label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #475569;
+}
+
+.form-group-sell select,
+.form-group-sell input {
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 13px;
+  outline: none;
+  font-family: "Lato", sans-serif;
+  transition: all 0.2s ease;
+  background-color: #fff;
+}
+
+.form-group-sell select:focus,
+.form-group-sell input:focus {
+  border-color: #f75d34;
+  box-shadow: 0 0 0 3px rgba(247,93,52,0.1);
+}
+
+.form-row-sell {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.submit-listing-btn {
+  padding: 14px;
+  background: #f75d34;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 10px;
+  font-family: "Lato", sans-serif;
+}
+
+.submit-listing-btn:hover {
+  background: #e04f26;
+}
+
+.submit-listing-btn:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* Success Card */
+.sell-success-state {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.success-checkmark {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.sell-success-state h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #16a34a;
+  margin-bottom: 8px;
+}
+
+.sell-success-state p {
+  font-size: 13px;
+  color: #334155;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.sell-success-state .success-desc {
+  font-size: 11px;
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+.sell-another-btn {
+  padding: 12px 30px;
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-family: "Lato", sans-serif;
+}
+
+.sell-another-btn:hover {
+  background: #15803d;
+}
+
+@media screen and (max-width: 1024px) {
+  .sell-hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .sell-hero-left {
+    text-align: center;
+  }
+  .bullet-item {
+    text-align: left;
+  }
+  .sell-car-form {
+    text-align: left;
+  }
+  .sell-hero-right {
+    width: 100%;
+    min-width: unset;
+  }
+}
