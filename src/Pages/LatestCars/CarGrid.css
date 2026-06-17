@@ -232,3 +232,24 @@
 .reset-btn:hover {
   background: #d04d08;
 }
+
+/* ── Media Queries for Responsiveness ── */
+@media screen and (max-width: 992px) {
+  .cars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cars-grid {
+    grid-template-columns: 1fr;
+  }
+  .grid-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .clear-filters-btn {
+    align-self: flex-start;
+  }
+}

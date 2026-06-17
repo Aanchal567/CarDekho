@@ -515,3 +515,15 @@
     flex-direction: column;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .specs-grid {
+    grid-template-columns: 1fr;
+  }
+  .car-modal-box {
+    border-radius: 12px;
+  }
+  .car-modal-content {
+    padding: 20px 16px;
+  }
+}

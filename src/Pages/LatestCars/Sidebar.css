@@ -101,3 +101,19 @@
 .estimated { color: #888; font-size: 10px; }
 
 .launch-date { font-size: 10px; color: #888; margin-top: 2px; }
+
+/* ── Media Queries for Responsiveness ── */
+@media screen and (max-width: 992px) {
+  .sidebar {
+    width: 100%;
+  }
+  .brands-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .brands-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

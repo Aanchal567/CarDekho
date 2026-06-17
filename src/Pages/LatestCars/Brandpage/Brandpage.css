@@ -386,3 +386,49 @@
 }
 
 .view-used-link:hover { text-decoration: underline; }
+
+/* ── Media Queries for Responsiveness ── */
+@media screen and (max-width: 992px) {
+  .brand-tabs {
+    padding: 0 16px;
+    top: 108px;
+  }
+  .brand-main {
+    flex-direction: column;
+    padding: 16px;
+    gap: 24px;
+  }
+  .brand-sidebar {
+    width: 100%;
+  }
+  .sb-brands-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .brand-tabs {
+    top: 120px;
+    scrollbar-width: none;
+  }
+  .brand-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .brand-car-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .brand-car-img-wrap {
+    width: 100%;
+    min-width: 0;
+  }
+  .brand-car-img-wrap img {
+    height: 180px;
+  }
+  .brand-car-info {
+    padding: 16px;
+  }
+  .sb-brands-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -237,24 +237,27 @@
 }
 
 @media screen and (max-width: 768px) {
+  .compare-main {
+    padding: 20px 16px;
+  }
   .compare-selection-row {
     flex-direction: column;
+    gap: 16px;
   }
   .vs-badge {
     transform: rotate(90deg);
+    margin: 10px 0;
   }
-  .compare-row {
-    flex-direction: column;
+  .select-box-card {
+    padding: 20px;
+    width: 100%;
   }
-  .compare-label {
-    border-right: none;
-    border-bottom: 1px solid #e2e8f0;
+  .compare-results-section {
+    padding: 16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
-  .compare-val-col {
-    border-right: none;
-    border-bottom: 1px solid #e2e8f0;
-  }
-  .compare-val-col:last-child {
-    border-bottom: none;
+  .compare-table {
+    min-width: 580px;
   }
 }

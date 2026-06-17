@@ -292,3 +292,15 @@
   line-height: 1.4;
   margin: 0;
 }
+
+@media screen and (max-width: 480px) {
+  .login-modal-box {
+    border-radius: 12px;
+  }
+  .login-header-banner {
+    padding: 24px 16px;
+  }
+  .login-body {
+    padding: 20px 16px;
+  }
+}

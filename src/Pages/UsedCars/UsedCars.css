@@ -628,5 +628,24 @@
   .dealers-list {
     grid-template-columns: 1fr;
   }
+  .used-tabs {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 16px;
+    margin-top: 20px;
+  }
+  .used-tab-btn {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+  .used-cars-main {
+    padding: 20px 16px 40px;
+  }
+  .booking-modal-box {
+    padding: 30px 20px;
+  }
+  .dealers-list {
+    gap: 16px;
+  }
 }
 

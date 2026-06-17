@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import { Search, Heart, User, MapPin, ChevronDown, Trash2 } from "lucide-react";
+import { Search, Heart, User, MapPin, ChevronDown, Trash2, Menu, X } from "lucide-react";
 import NewCarsDropdown from "./NewCarsDropdown";
 import UsedCarsDropdown from "./UsedCarsDropdown";
 import NewsDropdown from "./NewsDropdown";
@@ -11,6 +11,50 @@ import LoginModal from "./LoginModal";
 import { useApp } from "../context/AppContext";
 import { allCars, brandLogos } from "../data/carsData";
 import { useNavigate, useLocation } from "react-router-dom";
+
+
+const menuData = {
+  newCars: {
+    title: "New Cars",
+    items: [
+      { label: "Explore New Cars", path: "/new-cars" },
+      { label: "Electric Cars", path: "/new-cars?fuel=electric" },
+      { label: "Popular Cars", path: "/new-cars?tab=popular" },
+      { label: "Upcoming Cars", path: "/new-cars?tab=upcoming" },
+      { label: "New Launches", path: "/new-cars?tab=upcoming" },
+      { label: "Popular Brands", path: "/latestcars" },
+      { label: "Compare Cars", path: "/compare-cars" },
+      { label: "New Car Offers & Discounts", path: "/new-cars?tab=offers" },
+    ]
+  },
+  usedCars: {
+    title: "Used Cars",
+    items: [
+      { label: "Buy Used Cars", path: "/used-cars" },
+      { label: "Used Cars In Your City", path: "/used-cars?city=local" },
+      { label: "Sell My Car", path: "/sell-my-car" },
+      { label: "Used Car Valuation", path: "/used-cars?tab=valuation" },
+      { label: "Dealership Near Me", path: "/used-cars?tab=dealers" },
+    ]
+  },
+  news: {
+    title: "News & Reviews",
+    items: [
+      { label: "News & Top stories", path: "/car-news?tab=news" },
+      { label: "Car Expert Reviews", path: "/car-news?tab=expert" },
+      { label: "User Reviews", path: "/car-news?tab=user" },
+      { label: "Car Collection", path: "/car-news?tab=collection" },
+      { label: "Tips & Advice", path: "/car-news?tab=tips" },
+    ]
+  },
+  videos: {
+    title: "Videos",
+    items: [
+      { label: "Video Reviews", path: "/car-videos?tab=reviews" },
+      { label: "Visual Stories", path: "/car-videos?tab=stories" },
+    ]
+  }
+};
 
 const Navbar = () => {
   const {
@@ -29,6 +73,8 @@ const Navbar = () => {
   const [searchText, setSearchText] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [showWishlist, setShowWishlist] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeAccordion, setActiveAccordion] = useState(null);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -38,6 +84,18 @@ const Navbar = () => {
       setShowLoginModal(true);
     }
   }, [location]);
+
+  // Disable body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMenuOpen]);
 
   const handleSearchChange = (e) => {
     const val = e.target.value;
@@ -85,11 +143,24 @@ const Navbar = () => {
     }
   };
 
+  const handleMobileLinkClick = (path) => {
+    navigate(path);
+    setIsMenuOpen(false);
+  };
+
   return (
     <>
       <nav className="navbar">
         <div className="navbar-top">
-          <div className="logo" onClick={() => { setSearchQuery(""); navigate("/"); }} style={{ cursor: "pointer" }}>
+          <button 
+            className="menu-toggle-btn" 
+            aria-label="Toggle menu" 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+
+          <div className="logo" onClick={() => { setSearchQuery(""); navigate("/"); setIsMenuOpen(false); }} style={{ cursor: "pointer" }}>
             <img src="https://stimg.cardekho.com/pwa/img/carDekho-newLogo.svg" alt="CarDekho" />
           </div>
           
@@ -216,6 +287,86 @@ const Navbar = () => {
             <ChevronDown size={13} />
           </div>
         </div>
+
+        {/* Mobile slide-out drawer menu */}
+        <div className={`mobile-drawer ${isMenuOpen ? "open" : ""}`}>
+          <div className="mobile-drawer-header">
+            <div className="logo" onClick={() => { setSearchQuery(""); navigate("/"); setIsMenuOpen(false); }} style={{ cursor: "pointer" }}>
+              <img src="https://stimg.cardekho.com/pwa/img/carDekho-newLogo.svg" alt="CarDekho" />
+            </div>
+            <button className="drawer-close-btn" onClick={() => setIsMenuOpen(false)}>
+              <X size={22} />
+            </button>
+          </div>
+          
+          <div className="mobile-drawer-content">
+            <div className="mobile-drawer-quick">
+              <div className="mobile-city" onClick={() => { setShowModal(true); setIsMenuOpen(false); }}>
+                <MapPin size={16} color="#f75d34" />
+                <span>{city}</span>
+                <ChevronDown size={12} color="#888" />
+              </div>
+            </div>
+
+            <div className="mobile-accordion-list">
+              {Object.entries(menuData).map(([key, section]) => {
+                const isOpen = activeAccordion === key;
+                return (
+                  <div key={key} className="mobile-accordion-item">
+                    <div 
+                      className={`mobile-accordion-header ${isOpen ? "active" : ""}`}
+                      onClick={() => setActiveAccordion(isOpen ? null : key)}
+                    >
+                      <span>{section.title}</span>
+                      <ChevronDown size={14} className={`accordion-chevron ${isOpen ? "open" : ""}`} />
+                    </div>
+                    {isOpen && (
+                      <div className="mobile-accordion-body">
+                        {section.items.map((item, i) => (
+                          <div 
+                            key={i} 
+                            className="mobile-accordion-subitem"
+                            onClick={() => handleMobileLinkClick(item.path)}
+                          >
+                            {item.label}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+            
+            <div className="mobile-drawer-footer">
+              {user ? (
+                <div className="mobile-user-section">
+                  <div className="mobile-user-info">
+                    <div className="avatar-circle">
+                      {user.name.charAt(0).toUpperCase()}
+                    </div>
+                    <div>
+                      <h4 className="user-name">{user.name}</h4>
+                      <p className="user-phone">{user.phone}</p>
+                    </div>
+                  </div>
+                  <div className="mobile-footer-links">
+                    <div className="mobile-footer-item" onClick={() => handleMobileLinkClick("/used-cars?tab=valuation")}>My Valuation</div>
+                    <div className="mobile-footer-item" onClick={() => handleMobileLinkClick("/sell-my-car")}>Sell My Car</div>
+                    <div className="mobile-footer-item logout-item" onClick={() => { setUser(null); setIsMenuOpen(false); }}>Logout</div>
+                  </div>
+                </div>
+              ) : (
+                <button className="mobile-login-btn" onClick={() => { setShowLoginModal(true); setIsMenuOpen(false); }}>
+                  <User size={18} />
+                  <span>Login / Register</span>
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {isMenuOpen && <div className="mobile-drawer-backdrop" onClick={() => setIsMenuOpen(false)} />}
       </nav>
 
       {showModal && (

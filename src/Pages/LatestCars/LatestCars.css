@@ -122,3 +122,49 @@
 }
 
 .left-section { flex: 1; min-width: 0; }
+
+/* ── Media Queries for Responsiveness ── */
+@media screen and (max-width: 992px) {
+  .main-content {
+    flex-direction: column;
+    padding: 16px;
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #topBanner {
+    min-height: auto;
+  }
+  .hero-overlay {
+    padding: 40px 20px 20px;
+    min-height: 280px;
+  }
+  .hero-text h1 {
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+  .hero-text h1 br {
+    display: none;
+  }
+  .hero-filters {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .hero-filters select {
+    width: 100%;
+    min-width: 0;
+    padding: 14px 16px;
+    border-right: none;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+  }
+  .search-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+    border-radius: 0 0 8px 8px;
+  }
+}

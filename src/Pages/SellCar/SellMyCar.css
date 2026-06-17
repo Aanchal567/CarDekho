@@ -600,4 +600,61 @@
     width: 100%;
     min-width: unset;
   }
+}
+
+/* ── Media Queries for Responsiveness ── */
+@media screen and (max-width: 768px) {
+  .sell-hero-section {
+    padding: 40px 16px;
+  }
+  .sell-form-card {
+    padding: 20px;
+  }
+  .how-works-section,
+  .reviews-section,
+  .sell-brands-section,
+  .sell-faq-section,
+  .city-section,
+  .breadcrumb {
+    padding: 24px 16px;
+  }
+  .how-works-inner {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .how-works-right {
+    width: 100%;
+    text-align: center;
+  }
+  .how-works-img-placeholder {
+    height: auto;
+    background: transparent;
+  }
+  .how-works-img-placeholder img {
+    width: 100%;
+    height: auto;
+    max-width: 333px;
+  }
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .top-cities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sell-brands-box {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  .sell-hero-left h1 {
+    font-size: 26px;
+  }
+  .form-row-sell {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 }
